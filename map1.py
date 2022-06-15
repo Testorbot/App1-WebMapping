@@ -22,7 +22,7 @@ for col in data["COLOR"]:
     elif col == "YELLOW":
         mrt_line.append("orange")
     else:
-        mrt_line.append("lightgray")
+        mrt_line.append("gray")
 
 for stn in data["STN_NAME"]:
     wiki_str = "https://en.wikipedia.org/wiki/" + stn.title().replace(" ", "_").replace("Mrt", "MRT")
@@ -49,4 +49,4 @@ for lt, ln, stat, line_color, wiki_link in zip(lat, lon, mrt, mrt_line, wiki):
 
 map.add_child(fg)
 
-map.save("Map1.html")
+map.save("index.html")
