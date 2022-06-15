@@ -22,7 +22,7 @@ for col in data["COLOR"]:
     elif col == "YELLOW":
         mrt_line.append("orange")
     else:
-        mrt_line.append("gray")
+        mrt_line.append("darkgray")
 
 for stn in data["STN_NAME"]:
     wiki_str = "https://en.wikipedia.org/wiki/" + stn.title().replace(" ", "_").replace("Mrt", "MRT").replace("Lrt", "LRT")
@@ -45,6 +45,7 @@ for lt, ln, stat, line_color, wiki_link in zip(lat, lon, mrt, mrt_line, wiki):
         popup=folium.Popup(iframe), 
         color=line_color, 
         fill=True,
+        fill_opacity=0.85,
         ))
 
 map.add_child(fg)
