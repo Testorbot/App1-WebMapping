@@ -25,7 +25,7 @@ for col in data["COLOR"]:
         mrt_line.append("gray")
 
 for stn in data["STN_NAME"]:
-    wiki_str = "https://en.wikipedia.org/wiki/" + stn.title().replace(" ", "_").replace("Mrt", "MRT")
+    wiki_str = "https://en.wikipedia.org/wiki/" + stn.title().replace(" ", "_").replace("Mrt", "MRT").replace("Lrt", "LRT")
     wiki.append(wiki_str)
 
 map = folium.Map(location=LOC, zoom_start=12, tiles="Stamen Terrain")
