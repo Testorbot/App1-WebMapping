@@ -10,7 +10,7 @@ col_dict = {
     "BLUE":"blue",
     "PURPLE":"purple",
     "YELLOW":"orange",
-    "OTHERS":"darkgray"
+    "OTHERS":"black"
 }
 
 data = pandas.read_csv("mrtsg.csv")
@@ -32,7 +32,7 @@ fg_green = folium.FeatureGroup(name="East-West Line (Green)")
 fg_blue = folium.FeatureGroup(name="Downtown Line (Blue)")
 fg_purple = folium.FeatureGroup(name="North-East Line (Purple)")
 fg_yellow = folium.FeatureGroup(name="Circle Line (Yellow)")
-fg_gray = folium.FeatureGroup(name="LRT(Gray)")
+fg_black = folium.FeatureGroup(name="LRT(Black)")
 
 def fg_def(col_value, fg_name, df):
     new_df_color = df[df['color'] == col_value]
@@ -60,7 +60,7 @@ fg_dict = {
     "blue":fg_blue,
     "purple":fg_purple,
     "orange":fg_yellow,
-    "darkgray":fg_gray,
+    "black":fg_black,
 }
 
 for line_color,fg_name in fg_dict.items():
