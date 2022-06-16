@@ -46,7 +46,7 @@ def fg_def(col_value, fg_name, df):
         iframe = folium.IFrame(html=f"<h4>{stat}</h4><a href={wiki_link} target='_blank'>Wiki info", width=200, height=100)
         fg_name.add_child(folium.CircleMarker(
             radius=5,
-            location=[lt, ln],
+            location=(lt, ln),
             popup=folium.Popup(iframe),
             color=line_color,
             fill=True,
